@@ -1,0 +1,2438 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Standard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <style type="text/css">.tk-museo-sans{font-family:"museo-sans",sans-serif;}</style>
+<style type="text/css">@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-normal.woff2) format("woff2"),url(assets/fonts/museo-sans-normal.woff) format("woff"),url(assets/fonts/museo-sans-normal.opentype) format("opentype");font-weight:300;font-style:normal;font-display:auto;}@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-italic.woff2) format("woff2"),url(assets/fonts/museo-sans-italic.woff) format("woff"),url(assets/fonts/museo-sans-italic.opentype) format("opentype");font-weight:300;font-style:italic;font-display:auto;}@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-normal-1.woff2) format("woff2"),url(assets/fonts/museo-sans-normal-1.woff) format("woff"),url(assets/fonts/museo-sans-normal-1.opentype) format("opentype");font-weight:700;font-style:normal;font-display:auto;}@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-italic-1.woff2) format("woff2"),url(assets/fonts/museo-sans-italic-1.woff) format("woff"),url(assets/fonts/museo-sans-italic-1.opentype) format("opentype");font-weight:700;font-style:italic;font-display:auto;}</style>
+<style type="text/css">.tk-museo-sans{font-family:"museo-sans",sans-serif;}</style>
+<style type="text/css">@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-normal.woff2) format("woff2"),url(assets/fonts/museo-sans-normal.woff) format("woff"),url(assets/fonts/museo-sans-normal.opentype) format("opentype");font-weight:300;font-style:normal;font-display:auto;}@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-italic.woff2) format("woff2"),url(assets/fonts/museo-sans-italic.woff) format("woff"),url(assets/fonts/museo-sans-italic.opentype) format("opentype");font-weight:300;font-style:italic;font-display:auto;}@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-normal-1.woff2) format("woff2"),url(assets/fonts/museo-sans-normal-1.woff) format("woff"),url(assets/fonts/museo-sans-normal-1.opentype) format("opentype");font-weight:700;font-style:normal;font-display:auto;}@font-face{font-family:museo-sans;src:url(assets/fonts/museo-sans-italic-1.woff2) format("woff2"),url(assets/fonts/museo-sans-italic-1.woff) format("woff"),url(assets/fonts/museo-sans-italic-1.opentype) format("opentype");font-weight:700;font-style:italic;font-display:auto;}</style>
+</head>
+<body>
+  <app-root>
+    <div class="main-spinner text-muted">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <style media="screen">
+      @-webkit-keyframes dot-fx {
+        0%,
+        70%,
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        35% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @-moz-keyframes dot-fx {
+        0%,
+        70%,
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        35% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @-o-keyframes dot-fx {
+        0%,
+        70%,
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        35% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes dot-fx {
+        0%,
+        70%,
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        35% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .main-spinner {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+           -moz-transform: translate(-50%, -50%);
+             -o-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0.3em;
+      }
+
+      .main-spinner>.dot {
+        width: 1.4em;
+        height: 1.4em;
+        border-width: 0.28em;
+        border-style: solid;
+        border-color: inherit;
+        border-radius: 50%;
+        transform: scale(0);
+        -webkit-animation: dot-fx 1800ms ease infinite 0ms;
+           -moz-animation: dot-fx 1800ms ease infinite 0ms;
+             -o-animation: dot-fx 1800ms ease infinite 0ms;
+                animation: dot-fx 1800ms ease infinite 0ms;
+      }
+
+      .main-spinner>.dot:nth-child(2) {
+        margin-left: 0.28em;
+        -webkit-animation: dot-fx 1800ms ease infinite 270ms;
+           -moz-animation: dot-fx 1800ms ease infinite 270ms;
+             -o-animation: dot-fx 1800ms ease infinite 270ms;
+                animation: dot-fx 1800ms ease infinite 270ms;
+      }
+
+      .main-spinner>.dot:nth-child(3) {
+        margin-left: 0.28em;
+        -webkit-animation: dot-fx 1800ms ease infinite 540ms;
+           -moz-animation: dot-fx 1800ms ease infinite 540ms;
+             -o-animation: dot-fx 1800ms ease infinite 540ms;
+                animation: dot-fx 1800ms ease infinite 540ms;
+      }
+    </style>
+  </app-root>
+
+  
+  <script>
+  window.__sb__ = {
+    presentation: {
+  "id": "8gld9u042r",
+  "name": "Standard",
+  "slides": [
+    {
+      "id": "d47b97ec-c0fc-42db-bd04-20f1ce75b71b",
+      "elements": [
+        {
+          "id": "7anffocq9",
+          "type": "heading",
+          "data": {
+            "heading": "<p style=\"text-align: left;\">Standard: Stablecoin for synthetic assets</p>",
+            "subheading": "<p>Hyungsuk Kang</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07112572070635556,
+            "y": 0.7310433710489134,
+            "w": 1.0206124460989816,
+            "h": 0.14024243100905626,
+            "z": 2
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        3,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "243d7c0a-a703-4d26-87ae-5e3eb44a17cc",
+      "elements": [
+        {
+          "id": "f4a00d10-85c8-4973-ad3e-3eed419e1fc3",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Problems</p>",
+            "subheading": "<p>with current algorithmic stablecoins</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07225294578103097,
+            "y": 0.050483517635331765,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 4
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "ecb6f0e5-5a36-4679-82ef-fa3e49dea12c",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "MsBy_Qx-62k",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1496855631292-9259fb1a0341",
+              "thumbnailUrl": "assets/img/photo-1496855631292-9259fb1a0341",
+              "usageReportUrl": "https://api.unsplash.com/photos/MsBy_Qx-62k/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@rylomedia?utm_source=slidebean&utm_medium=referral",
+              "owner": "Ryan Loughlin",
+              "crop": "fill"
+            },
+            "icon": null,
+            "caption": "<p>Price stability as commodity has no firm backed value yet, and there are no sustainable use case for interoperability except initial distribution with farming</p>"
+          },
+          "options": {
+            "imageCrop": "fill",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.09474607798867689,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 5
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        },
+        {
+          "id": "7476d080-9bf6-4bcc-8f55-f607abb69b77",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "Tyiz9lyauww",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1569406143146-d6eeb9b532c0",
+              "thumbnailUrl": "assets/img/photo-1569406143146-d6eeb9b532c0",
+              "usageReportUrl": "https://api.unsplash.com/photos/Tyiz9lyauww/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@lahirusupun?utm_source=slidebean&utm_medium=referral",
+              "owner": "Lahiru Supunchandra",
+              "crop": "fill"
+            },
+            "icon": null,
+            "caption": "<p>Oracles are too centralized, and there is no incentivized ecosystem to decentralize them </p>"
+          },
+          "options": {
+            "imageCrop": "circle",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.3749999908770491,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 6
+          },
+          "fractionalIndex": [
+            4,
+            1
+          ]
+        },
+        {
+          "id": "fc270c24-7128-4bb2-8c50-ac1075365154",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hi58b9A07tU",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1594624531847-fb0ebd8f844e",
+              "thumbnailUrl": "assets/img/photo-1594624531847-fb0ebd8f844e",
+              "usageReportUrl": "https://api.unsplash.com/photos/hi58b9A07tU/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@hulkiokantabak?utm_source=slidebean&utm_medium=referral",
+              "owner": "Hulki Okan Tabak",
+              "crop": "contain"
+            },
+            "icon": null,
+            "caption": "<p>Auctions are hard to track and has barriers to enter, leading to plutocracy</p>"
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.65625,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 7
+          },
+          "fractionalIndex": [
+            5,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        5,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "0c7e4bbe-9a13-40c2-a85c-182c0a48b899",
+      "elements": [
+        {
+          "id": "ab9ba431-865c-4b43-bdb9-dbc2506c7389",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "CCKcwh7s9A4",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1503058474900-cb76710f9cd1",
+              "thumbnailUrl": "assets/img/photo-1503058474900-cb76710f9cd1",
+              "usageReportUrl": "https://api.unsplash.com/photos/CCKcwh7s9A4/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@danielcgold?utm_source=slidebean&utm_medium=referral",
+              "owner": "Dan Gold",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCropRect": null,
+            "imageCrop": "fill"
+          },
+          "style": {
+            "w": 0.31249999999999994,
+            "h": 0.4751131713120445,
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "bc1b1b40-d74c-4c1e-add0-31d85289ed81",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "3InMDrsuYrk",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1502872364588-894d7d6ddfab",
+              "thumbnailUrl": "assets/img/photo-1502872364588-894d7d6ddfab",
+              "usageReportUrl": "https://api.unsplash.com/photos/3InMDrsuYrk/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@5tep5?utm_source=slidebean&utm_medium=referral",
+              "owner": "Alexander Popov",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCropRect": null,
+            "imageCrop": "fill"
+          },
+          "style": {
+            "w": 0.6562526578770926,
+            "h": 0.9999999443744334,
+            "x": 0.34375,
+            "y": 0,
+            "z": 2
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "229b9678-cae9-4e0d-bcd6-8b5d21cba537",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "PGdMhonLLZk",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1527698952067-61fc35796fcd",
+              "thumbnailUrl": "assets/img/photo-1527698952067-61fc35796fcd",
+              "usageReportUrl": "https://api.unsplash.com/photos/PGdMhonLLZk/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@togna_bologna?utm_source=slidebean&utm_medium=referral",
+              "owner": "Tony Reid",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCropRect": null,
+            "imageCrop": "fill"
+          },
+          "style": {
+            "w": 0.31249999999999994,
+            "h": 0.4773803316719887,
+            "x": 0,
+            "y": 0.5226223514830154,
+            "z": 4
+          },
+          "fractionalIndex": [
+            4,
+            1
+          ]
+        },
+        {
+          "id": "kbq1utqhei",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p><i>\"What makes it different? It is based on the concept of credit. with a much, much older tradition that spreads back even farther than commodity money and it is very powerful and foundational to what makes us human, and it starts with the principle of </i><b><i>mutual credit.</i></b><i> </i><b><i>This is even older than the rise of agriculture and in fact spreads back at least to the appearance of modern human behavior</i></b><i>\"</i></p><ul><li>Andy Milenius at MakerDAO: A New Hope for Financial Reform in Devcon 4</li></ul>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.13343593433116063,
+            "y": 0.32156251132186714,
+            "z": 5,
+            "w": 0.6930260790423945,
+            "h": 0.35687707443553807
+          },
+          "fractionalIndex": [
+            5,
+            1
+          ]
+        },
+        {
+          "id": "9u6zyftl2e",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p><span class=\"textsize-h1\">What should be backed then?</span></p>"
+          },
+          "options": {
+            "variation": "default"
+          },
+          "style": {
+            "x": 0.06427551695232281,
+            "y": 0.0626869979930156,
+            "z": 6,
+            "w": 0.6010180137668975,
+            "h": 0.20265119221709565
+          },
+          "fractionalIndex": [
+            6,
+            1
+          ]
+        }
+      ],
+      "options": {},
+      "notes": "",
+      "fractionalIndex": [
+        21,
+        4
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "uz6duqfxpg",
+      "elements": [
+        {
+          "id": "f4a00d10-85c8-4973-ad3e-3eed419e1fc3",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Solution</p>",
+            "subheading": "<p>Rebased collateral stablecoins</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07225294578103097,
+            "y": 0.050483517635331765,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 4
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "ecb6f0e5-5a36-4679-82ef-fa3e49dea12c",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "sshfvmfajpq",
+              "url": "assets/img/user_aafe0f87b2fc4b0bbdff298c69e368fd_elastic-supply.png",
+              "crop": "fill"
+            },
+            "icon": null,
+            "caption": "<p>Collaterizable synthetic stablecoin like DAI, but with elastic supply like AMPL</p>"
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.09474607798867689,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 5
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        },
+        {
+          "id": "7476d080-9bf6-4bcc-8f55-f607abb69b77",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "MMJx78V7xS8",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1425913397330-cf8af2ff40a1",
+              "thumbnailUrl": "assets/img/photo-1425913397330-cf8af2ff40a1",
+              "usageReportUrl": "https://api.unsplash.com/photos/MMJx78V7xS8/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@skamenar?utm_source=slidebean&utm_medium=referral",
+              "owner": "Steven Kamenar",
+              "crop": "fill"
+            },
+            "icon": null,
+            "caption": "<p>Block reward to oracle providers with 8:2 ratio between validators and the providers</p>"
+          },
+          "options": {
+            "imageCrop": "circle",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.3749999908770491,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 6
+          },
+          "fractionalIndex": [
+            4,
+            1
+          ]
+        },
+        {
+          "id": "fc270c24-7128-4bb2-8c50-ac1075365154",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "f7n9nan59rt",
+              "url": "assets/img/user_c9bb2f35abbf4048a24ff3655469f4ef_arbitrage.png",
+              "crop": "contain"
+            },
+            "icon": null,
+            "caption": "<p>Automated market makers(AMM) where liquidated collateral makes an arbitrage opportunity</p>"
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.65625,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 7
+          },
+          "fractionalIndex": [
+            5,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        16,
+        3
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "2b1b13de-ed74-45e0-a176-e19d47929354",
+      "elements": [
+        {
+          "id": "828d1065-e6d0-4b44-8d89-57812dd02526",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "1zO4O3Z0UJA",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1604594849809-dfedbc827105",
+              "thumbnailUrl": "assets/img/photo-1604594849809-dfedbc827105",
+              "usageReportUrl": "https://api.unsplash.com/photos/1zO4O3Z0UJA/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@mathieustern?utm_source=slidebean&utm_medium=referral",
+              "owner": "Mathieu Stern",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "7anffocq9",
+          "type": "heading",
+          "data": {
+            "heading": "<p style=\"text-align: left;\">Tokens</p>",
+            "subheading": ""
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07125,
+            "y": 0.621,
+            "w": 1.0806345824594958,
+            "h": 0.2877828328859179,
+            "z": 2
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        11,
+        2
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "t28r71fywv",
+      "elements": [
+        {
+          "id": "f4a00d10-85c8-4973-ad3e-3eed419e1fc3",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Tokens</p>",
+            "subheading": "<p>Standard protocol has 3-token system</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07225294578103097,
+            "y": 0.050483517635331765,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 4
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "ecb6f0e5-5a36-4679-82ef-fa3e49dea12c",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "8luokfdq6mq",
+              "url": "assets/img/user_2286a4bada334855a315af20863dd6fa_mtr.png",
+              "crop": "contain"
+            },
+            "icon": null,
+            "caption": "<p>Meter(MTR) is the stablecoin which is synthetically generated by the protocol's standard system. Holders can use MTR to use as a medium of exchange, buy bonds or farm tokens in standard system.</p>"
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.09474607798867689,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 5
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        },
+        {
+          "id": "7476d080-9bf6-4bcc-8f55-f607abb69b77",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "dmmewjavqps",
+              "url": "assets/img/user_de992896120b466ba5580ae5219f83c5_ltr.png",
+              "crop": "fill"
+            },
+            "icon": null,
+            "caption": "<p>Liter(LTR) is a liquidity provider token that represents a share from amm module. Similar to LP tokens in Uniswap, it can be burned in amm to receive deposited assets. Liter(LTR) token can be used for yield farming. </p>"
+          },
+          "options": {
+            "imageCrop": "circle",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.375,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 6
+          },
+          "fractionalIndex": [
+            4,
+            1
+          ]
+        },
+        {
+          "id": "fc270c24-7128-4bb2-8c50-ac1075365154",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "ar8bybb4qmf",
+              "url": "assets/img/user_ba2dee44d16b48ba85a84d28e2a287f0_stnd.png",
+              "crop": "contain"
+            },
+            "icon": null,
+            "caption": "<p>Standard(STND) is network and governance token to use Standard protocol. STND holders can stake for getting a block reward, participate in on-chain governance. STND is used as transaction fee.</p>"
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.65625,
+            "y": 0.25,
+            "w": 0.25,
+            "h": 0.6000000000000001,
+            "z": 7
+          },
+          "fractionalIndex": [
+            5,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        13,
+        2
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "wcyhfa7c9w",
+      "elements": [
+        {
+          "id": "828d1065-e6d0-4b44-8d89-57812dd02526",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "msnyz9L6gs4",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1508179522353-11ba468c4a1c",
+              "thumbnailUrl": "assets/img/photo-1508179522353-11ba468c4a1c",
+              "usageReportUrl": "https://api.unsplash.com/photos/msnyz9L6gs4/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@chesterwade?utm_source=slidebean&utm_medium=referral",
+              "owner": "chester wade",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "7anffocq9",
+          "type": "heading",
+          "data": {
+            "heading": "<p style=\"text-align: left;\">Technical details</p>",
+            "subheading": "<p>features</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07125,
+            "y": 0.621,
+            "w": 1.0806345824594958,
+            "h": 0.2877828328859179,
+            "z": 2
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        7,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "480f1fa7-ef13-4584-b0d3-fb4cbb2698d5",
+      "elements": [
+        {
+          "id": "8e8a5d0c-cf23-4c2c-9501-23744db57b2a",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "uq2RvURcABM",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1545158828-4e222fdb1d5a",
+              "thumbnailUrl": "assets/img/photo-1545158828-4e222fdb1d5a",
+              "usageReportUrl": "https://api.unsplash.com/photos/uq2RvURcABM/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@iriser?utm_source=slidebean&utm_medium=referral",
+              "owner": "Irina Iriser",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Rebased elastic supply</p>",
+            "subheading": ""
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.12500000000000003,
+            "y": 0.06233333333333324,
+            "w": 0.46,
+            "h": 0.141,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Rebasing stablecoin's total supply with oracle price, stablecoin's supply is adjusted to have stable value to 1 USD.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.12500000000000003,
+            "y": 0.22899999999999993,
+            "w": 0.76,
+            "h": 0.158,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "es8xvbydm9",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "ntbrkamizsi",
+              "url": "assets/img/user_0a66c9bcaa624259b3b654cdca0579cf_Frame-6-1-.png",
+              "crop": "contain"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCropRect": null,
+            "imageCrop": "contain"
+          },
+          "style": {
+            "x": 0.175,
+            "y": 0.39566666666666667,
+            "w": 0.65,
+            "h": 0.542,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.25,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        15,
+        2
+      ],
+      "hasBeenManuallyArranged": false
+    },
+    {
+      "id": "03c07f3c-9194-45ee-87cc-99dfa505eafd",
+      "elements": [
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Oracle reward module</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.28853288418607637,
+            "y": 0.08662731858537488,
+            "w": 0.46,
+            "h": 0.141,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Substrate enables developers to split block rewards to other network participants in every era. Standard protocol rewards oracle providers in 20% of the total block reward in an era. Oracles are used for generating synthetic asset from the stablecoin meter(MTR).</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.0808206688085889,
+            "y": 0.3314062829363406,
+            "w": 0.4192285267539033,
+            "h": 0.3818949793573621,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "L2cxSuKWbpo",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1558459654-c430be5b0a44",
+              "thumbnailUrl": "assets/img/photo-1558459654-c430be5b0a44",
+              "usageReportUrl": "https://api.unsplash.com/photos/L2cxSuKWbpo/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@markusspiske?utm_source=slidebean&utm_medium=referral",
+              "owner": "Markus Spiske",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCrop": "circle",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.3158480567221337,
+            "h": 0.42443522624023994,
+            "x": 0.6049113840243855,
+            "y": 0.3248754910223805,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.24,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        23,
+        3
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "18744430-5c8d-4100-9e71-18117579c6e6",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hRemch0ZDwI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1507166763745-bfe008fbb831",
+              "thumbnailUrl": "assets/img/photo-1507166763745-bfe008fbb831",
+              "usageReportUrl": "https://api.unsplash.com/photos/hRemch0ZDwI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@conorsexton?utm_source=slidebean&utm_medium=referral",
+              "owner": "Conor Sexton",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Automated liquidation through AMMs</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07062496235496395,
+            "y": 0.04999998539828798,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Unlike other liquidation process from other defi protocols, Standard protocol has its own curated amm where liquidated assets are thrown to provide arbitrage trade.</p><p><br></p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.070625,
+            "y": 0.405,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "koeaaorgxit",
+              "url": "assets/img/user_2505cf3797e24b1f922ebdf05741f5c1_arbitrage.png",
+              "crop": "contain"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.4294158873576945,
+            "h": 0.7498139822464267,
+            "x": 0.5079881853906232,
+            "y": 0.19998439076984897,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.65,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        19,
+        2
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "bunrge4e5u",
+      "elements": [
+        {
+          "id": "828d1065-e6d0-4b44-8d89-57812dd02526",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "k1bO_VTiZSs",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1511447333015-45b65e60f6d5",
+              "thumbnailUrl": "assets/img/photo-1511447333015-45b65e60f6d5",
+              "usageReportUrl": "https://api.unsplash.com/photos/k1bO_VTiZSs/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@sandrokatalina?utm_source=slidebean&utm_medium=referral",
+              "owner": "Sandro Katalina",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "7anffocq9",
+          "type": "heading",
+          "data": {
+            "heading": "<p style=\"text-align: left;\">Standard protocol 101\t</p>",
+            "subheading": "<p>How do I use this protocol?</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07125,
+            "y": 0.621,
+            "w": 1.0806345824594958,
+            "h": 0.2877828328859179,
+            "z": 2
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        31,
+        3
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "bd511d09-4310-41f4-91de-f09e3d37dd2a",
+      "elements": [
+        {
+          "id": "kxpdmkg4x",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "ZzOa5G8hSPI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1535320903710-d993d3d77d29",
+              "thumbnailUrl": "assets/img/photo-1535320903710-d993d3d77d29",
+              "usageReportUrl": "https://api.unsplash.com/photos/ZzOa5G8hSPI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@m_b_m?utm_source=slidebean&utm_medium=referral",
+              "owner": "M. B. M.",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCrop": "fill",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1,
+            "z": 7
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Standard generates its stablecoin meter(MTR) by collaterizing other digital assets. One of the key ways a Vault owner can use the Meter(MTR) she generates is to purchase more collateral—typically DOT. This enables leverage trading to get more profit with existing one's assets.</p><p>Or MTR holders can generate synthetic assets from oracles like virtual stocks, commodities, etc.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.5294603716148278,
+            "y": 0.19786340690400453,
+            "w": 0.4375,
+            "h": 0.30000000000000004,
+            "z": 6
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dwiljbtg4v",
+          "type": "heading",
+          "data": {
+            "heading": "<p>In Bull run</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.02375,
+            "y": 0,
+            "z": 8
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.7,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        12,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "kyr23ijrwe",
+      "elements": [
+        {
+          "id": "kxpdmkg4x",
+          "type": "image",
+          "data": {
+            "image": {
+              "id": "x02p0yxftti",
+              "url": "assets/img/user_75f09ba09cbe4e51bbb144a49891de50_market.png",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1,
+            "z": 7
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>MTR holders can still earn profit by purchasing other digtial assets from liquidation.</p><p>Purchase assets with MTR and sell it in other DEX or other centralized exchange.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.5367527402725469,
+            "y": 0.4037335576332552,
+            "w": 0.4375,
+            "h": 0.30000000000000004,
+            "z": 6
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        },
+        {
+          "id": "dwiljbtg4v",
+          "type": "heading",
+          "data": {
+            "heading": "<p>In Bear run</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.02375,
+            "y": 0,
+            "z": 8
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.7,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        37,
+        3
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "881f69e4-afc5-4471-bb2f-80f9e48e61a5",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "s4I1xpX_ny8",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1519999482648-25049ddd37b1",
+              "thumbnailUrl": "assets/img/photo-1519999482648-25049ddd37b1",
+              "usageReportUrl": "https://api.unsplash.com/photos/s4I1xpX_ny8/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@maxwbender?utm_source=slidebean&utm_medium=referral",
+              "owner": "Max Bender",
+              "crop": "contain"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>The Building Blocks:</p><p>Runtime modules</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.0726140463553556,
+            "y": 0.6022996608944796,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.5,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        29,
+        2
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "c5749370-683e-4fdb-a007-25b21b56dfe7",
+      "elements": [
+        {
+          "id": "kxpdmkg4x",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "oCZHIa1D4EU",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1528360983277-13d401cdc186",
+              "thumbnailUrl": "assets/img/photo-1528360983277-13d401cdc186",
+              "usageReportUrl": "https://api.unsplash.com/photos/oCZHIa1D4EU/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@jasebloor?utm_source=slidebean&utm_medium=referral",
+              "owner": "Jase Bloor",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCrop": "fill",
+            "imageCropRect": {
+              "x": -0.4133976104638164,
+              "y": -0.008205005475421077,
+              "w": 2.5370006097429534,
+              "h": 1.0123967930787647
+            }
+          },
+          "style": {
+            "x": 0,
+            "y": 0,
+            "w": 0.375,
+            "h": 1,
+            "z": 7
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "7ef4c911-6d36-4b75-970e-a47516d7931d",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Runtime modules</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.4154805035280281,
+            "y": 0.05,
+            "w": 0.8346369464002258,
+            "h": 0.15002111770100532,
+            "z": 9
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "2bc2208e-cf7a-4222-b3e1-dd3b9bf271c4",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<ul><li>Token for registry</li></ul><p><br></p><ul><li>Market for amms</li></ul><p><br></p><ul><li>Vault for collaterization and generating synthetic assets</li></ul><p><br></p><ul><li>Oracle for price information</li></ul><p><br></p><ul><li>Farm for yield farming </li></ul>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.43797845700069904,
+            "y": 0.22486158904256476,
+            "w": 0.41547826864464,
+            "h": 0.7171674400797093,
+            "z": 10
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.7,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        15,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "3xv23gfiiy",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hRemch0ZDwI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1507166763745-bfe008fbb831",
+              "thumbnailUrl": "assets/img/photo-1507166763745-bfe008fbb831",
+              "usageReportUrl": "https://api.unsplash.com/photos/hRemch0ZDwI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@conorsexton?utm_source=slidebean&utm_medium=referral",
+              "owner": "Conor Sexton",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Token</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07062496235496395,
+            "y": 0.04999998539828798,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Token module is a ledger module where it records who owns a number of digital asset. Token module will register other assets from heterogeneous chain with bridges or other tokens from Polkadot ecosystem with xcm.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.070625,
+            "y": 0.405,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": null,
+            "icon": {
+              "__typename": "ExternalAsset",
+              "id": "1002702",
+              "source": "NounProject",
+              "url": "assets/img/proy-sust_1002702.svg",
+              "thumbnailUrl": "assets/img/png_1002702-200.png",
+              "usageReportUrl": null,
+              "creditUrl": null,
+              "owner": null
+            }
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.4294158873576945,
+            "h": 0.7498139822464267,
+            "x": 0.5079881853906232,
+            "y": 0.19998439076984897,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.65,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        33,
+        2
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "9qrurpz270",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hRemch0ZDwI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1507166763745-bfe008fbb831",
+              "thumbnailUrl": "assets/img/photo-1507166763745-bfe008fbb831",
+              "usageReportUrl": "https://api.unsplash.com/photos/hRemch0ZDwI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@conorsexton?utm_source=slidebean&utm_medium=referral",
+              "owner": "Conor Sexton",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Market</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07062496235496395,
+            "y": 0.04999998539828798,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Market module is a collection of automated market maker(AMM)s for meter(MTR) holders. The module enables MTR holders to purchase other digital assets, or provide liquidity to earn fee on every exchange in the market.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.070625,
+            "y": 0.405,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": null,
+            "icon": {
+              "__typename": "ExternalAsset",
+              "id": "291625",
+              "source": "NounProject",
+              "url": "assets/img/proy-sust_291625.svg",
+              "thumbnailUrl": "assets/img/png_291625-200.png",
+              "usageReportUrl": null,
+              "creditUrl": null,
+              "owner": null
+            }
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.4294158873576945,
+            "h": 0.7498139822464267,
+            "x": 0.5079881853906232,
+            "y": 0.19998439076984897,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.65,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        17,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "gjb99hj9n0",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hRemch0ZDwI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1507166763745-bfe008fbb831",
+              "thumbnailUrl": "assets/img/photo-1507166763745-bfe008fbb831",
+              "usageReportUrl": "https://api.unsplash.com/photos/hRemch0ZDwI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@conorsexton?utm_source=slidebean&utm_medium=referral",
+              "owner": "Conor Sexton",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Vault</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07062499666312759,
+            "y": 0.04998439908531582,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Vault module is a collaterization module where STND holders collaterize other digital assets and generate MTR. MTR holders can generate other synthetic assets with price information provided by oracle providers.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.070625,
+            "y": 0.405,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": null,
+            "icon": {
+              "__typename": "ExternalAsset",
+              "id": "708540",
+              "source": "NounProject",
+              "url": "assets/img/proy-sust_708540.svg",
+              "thumbnailUrl": "assets/img/png_708540-200.png",
+              "usageReportUrl": null,
+              "creditUrl": null,
+              "owner": null
+            }
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.4294158873576945,
+            "h": 0.7498139822464267,
+            "x": 0.5079881853906232,
+            "y": 0.19998439076984897,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.65,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        35,
+        2
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "iing8zrj44",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hRemch0ZDwI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1507166763745-bfe008fbb831",
+              "thumbnailUrl": "assets/img/photo-1507166763745-bfe008fbb831",
+              "usageReportUrl": "https://api.unsplash.com/photos/hRemch0ZDwI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@conorsexton?utm_source=slidebean&utm_medium=referral",
+              "owner": "Conor Sexton",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Oracle</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07062496235496395,
+            "y": 0.04999998539828798,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Oracle module is a price feed information module which id produced by oracle providers. Oracle providers are chosen in every era. Oracle providers produce price inromation and rewarded in each era. If they produce outliers, they get slashed.</p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.070625,
+            "y": 0.405,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": null,
+            "icon": {
+              "__typename": "ExternalAsset",
+              "id": "421",
+              "source": "NounProject",
+              "url": "assets/img/proy-sust_421.svg",
+              "thumbnailUrl": "assets/img/png_421-200.png",
+              "usageReportUrl": null,
+              "creditUrl": null,
+              "owner": null
+            }
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.4294158873576945,
+            "h": 0.7498139822464267,
+            "x": 0.5079881853906232,
+            "y": 0.19998439076984897,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.65,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        53,
+        3
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "kqazuryfti",
+      "elements": [
+        {
+          "id": "9bb74740-203e-4bac-b378-cdf4486b1b93",
+          "type": "background",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "hRemch0ZDwI",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1507166763745-bfe008fbb831",
+              "thumbnailUrl": "assets/img/photo-1507166763745-bfe008fbb831",
+              "usageReportUrl": "https://api.unsplash.com/photos/hRemch0ZDwI/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@conorsexton?utm_source=slidebean&utm_medium=referral",
+              "owner": "Conor Sexton",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {},
+          "style": {},
+          "fractionalIndex": [
+            1,
+            3
+          ]
+        },
+        {
+          "id": "8qj1vu6sh",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Farm</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07062496235496395,
+            "y": 0.04999998539828798,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 15
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p>Farm module replicates the solidity contract for yield farming projects from ethereum where it distributes reward. Farm module will be used for reward to liquidity providers who produces pair between MTR and other digital assets.  </p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.070625,
+            "y": 0.405,
+            "w": 0.43736334596148363,
+            "h": 0.3073576730246641,
+            "z": 14
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "3b6060a0-7cd1-4059-b241-6fa92bc3c3cb",
+          "type": "image",
+          "data": {
+            "image": null,
+            "icon": {
+              "__typename": "ExternalAsset",
+              "id": "7556",
+              "source": "NounProject",
+              "url": "assets/img/proy-sust_7556.svg",
+              "thumbnailUrl": "assets/img/png_7556-200.png",
+              "usageReportUrl": null,
+              "creditUrl": null,
+              "owner": null
+            }
+          },
+          "options": {
+            "imageCrop": "contain",
+            "imageCropRect": null
+          },
+          "style": {
+            "w": 0.4294158873576945,
+            "h": 0.7498139822464267,
+            "x": 0.5079881853906232,
+            "y": 0.19998439076984897,
+            "z": 16
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.65,
+        "cropBackground": true,
+        "logoPosition": "top-right",
+        "backgroundFill": "solid",
+        "backgroundColorSet": false
+      },
+      "notes": "",
+      "fractionalIndex": [
+        71,
+        4
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "4585a6ec-58d6-4977-97a4-6aff6f5c4e92",
+      "elements": [
+        {
+          "id": "f4a00d10-85c8-4973-ad3e-3eed419e1fc3",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Token Distribution</p>",
+            "subheading": ""
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07225294578103097,
+            "y": 0.050483517635331765,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 4
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "79918b60-a9f2-413f-bae8-7e0eec4e64b9",
+          "type": "chart-pie",
+          "data": {
+            "mode": "pie",
+            "displayValues": true,
+            "source": [],
+            "chart": {
+              "title": "",
+              "labels": [
+                "Team",
+                "Protocol Development",
+                "Yield Farming distribution",
+                "Marketing ",
+                "Public Sale & Community",
+                "Seed",
+                "Private Sale"
+              ],
+              "values": [
+                10,
+                15,
+                40,
+                5,
+                10,
+                10,
+                10
+              ]
+            }
+          },
+          "options": {},
+          "style": {
+            "x": 0.07224607123769324,
+            "y": 0.10361786659538692,
+            "w": 0.6233701130388111,
+            "h": 0.9350142797666761,
+            "z": 5
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        },
+        {
+          "id": "87340132-ba2b-4f2c-a27b-402b85a54813",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "Mn9Fa_wQH-M",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1494587416117-f102a2ac0a8d",
+              "thumbnailUrl": "assets/img/photo-1494587416117-f102a2ac0a8d",
+              "usageReportUrl": "https://api.unsplash.com/photos/Mn9Fa_wQH-M/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@trapnation?utm_source=slidebean&utm_medium=referral",
+              "owner": "Andre Benz",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCropRect": {
+              "x": -1.3350844088411344,
+              "y": -0.011020883075382964,
+              "w": 3.847705119104636,
+              "h": 1.0236014703736562
+            },
+            "imageCrop": "fill"
+          },
+          "style": {
+            "w": 0.25,
+            "h": 1,
+            "x": 0.7499999087704912,
+            "y": 0,
+            "z": 6
+          },
+          "fractionalIndex": [
+            4,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        62,
+        3
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "c67bb6de-9f26-41e4-9885-fe835926f9ac",
+      "elements": [
+        {
+          "id": "f4a00d10-85c8-4973-ad3e-3eed419e1fc3",
+          "type": "heading",
+          "data": {
+            "heading": "<p>Roadmap</p>"
+          },
+          "options": {
+            "variation": "Scala"
+          },
+          "style": {
+            "x": 0.07225294578103097,
+            "y": 0.050483517635331765,
+            "w": 0.96875,
+            "h": 0.15000000000000002,
+            "z": 4
+          },
+          "fractionalIndex": [
+            2,
+            1
+          ]
+        },
+        {
+          "id": "9cce27a7-d383-4b90-a493-667283a548d5",
+          "type": "timeline",
+          "data": {
+            "items": [
+              {
+                "icon": null,
+                "image": null,
+                "text": "<p>2021 Q1</p><p>Kusama parachain crowdloan</p><p>Oracle module integration</p><p>Council Recruit\t</p>"
+              },
+              {
+                "icon": null,
+                "image": null,
+                "text": "<p>2021 Q2</p><p>Chainbridge test run in kusama</p><p>Run 1st Council</p><p>Yield farming starts</p>"
+              },
+              {
+                "icon": null,
+                "image": null,
+                "text": "<p><b>2021 Q3</b></p><p>Polkadot Parachain crowdloan</p>"
+              },
+              {
+                "text": "<p><b>2021 Q4</b></p><p>Yield farming starts if polkadot parachain is connected</p><p>Apply this protocol in other ecosystem(Cosmos, Ethererum, etc)</p>"
+              }
+            ],
+            "mode": "alternate"
+          },
+          "options": {},
+          "style": {
+            "w": 0.85765831393947,
+            "h": 0.6187563279092566,
+            "x": 0.0725,
+            "y": 0.238,
+            "z": 5
+          },
+          "fractionalIndex": [
+            3,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.3,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        87,
+        4
+      ],
+      "hasBeenManuallyArranged": true
+    },
+    {
+      "id": "e9f20e1f-7eef-4687-b0a7-64eb04c31f42",
+      "elements": [
+        {
+          "id": "kxpdmkg4x",
+          "type": "image",
+          "data": {
+            "image": {
+              "__typename": "ExternalAsset",
+              "id": "sGald6o_yZE",
+              "source": "Unsplash",
+              "url": "assets/img/photo-1551569723-a025182e9464",
+              "thumbnailUrl": "assets/img/photo-1551569723-a025182e9464",
+              "usageReportUrl": "https://api.unsplash.com/photos/sGald6o_yZE/download?client_id=64d34c0d4b13e39fcc76c60a7f874b20746ab70331c32d6ab3444d9ed2dba794",
+              "creditUrl": "http://unsplash.com/@ross_savchyn?utm_source=slidebean&utm_medium=referral",
+              "owner": "Rostyslav Savchyn",
+              "crop": "fill"
+            },
+            "icon": null
+          },
+          "options": {
+            "imageCrop": "fill",
+            "imageCropRect": null
+          },
+          "style": {
+            "x": 0.3125,
+            "y": 0,
+            "w": 0.6875,
+            "h": 1,
+            "z": 7
+          },
+          "fractionalIndex": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "0k6r3d9t1",
+          "type": "paragraph",
+          "data": {
+            "paragraph": "<p><br></p><p><b class=\"textsize-small\">Documentation</b><span class=\"textsize-small\"><span class=\"line-break\">﻿<span contenteditable=\"false\"><br></span>﻿</span>docs.standardprotocol.org</span></p><p><b class=\"textsize-small\">Email</b><span class=\"textsize-small\"><span class=\"line-break\">﻿<span contenteditable=\"false\"><br></span>﻿</span>hskang9@gmail.com</span><span class=\"line-break\">﻿<span contenteditable=\"false\"><br></span>﻿</span></p>"
+          },
+          "options": {},
+          "style": {
+            "x": 0.03907985145898629,
+            "y": 0.47002156548407426,
+            "w": 0.4375,
+            "h": 0.4242616267829054,
+            "z": 6
+          },
+          "fractionalIndex": [
+            1,
+            1
+          ]
+        }
+      ],
+      "options": {
+        "colorSet": 0,
+        "backgroundDim": 0.7,
+        "cropBackground": true,
+        "logoPosition": "top-right"
+      },
+      "notes": "",
+      "fractionalIndex": [
+        27,
+        1
+      ],
+      "hasBeenManuallyArranged": true
+    }
+  ],
+  "layoutId": null,
+  "formula": {
+    "id": "f92x1capdq",
+    "defaultElementVariations": {},
+    "defaultSlideOptions": {}
+  },
+  "palette": {
+    "id": "ornl1urc3x",
+    "colorSets": [
+      {
+        "text": "#fff",
+        "back": "#211E28",
+        "highlight": "#393245",
+        "chart0": "#fff",
+        "chart1": "#65577D",
+        "chart2": "#a38fc7",
+        "chart3": "#CFC8DB",
+        "chart4": "#393245"
+      }
+    ]
+  },
+  "textFont": {
+    "id": "tEPrjlFDa1",
+    "fontId": "museo-sans",
+    "fontFamily": "'museo-sans'",
+    "webfont": {
+      "typekit": {
+        "id": "wzt2mrv"
+      }
+    }
+  },
+  "headingFont": {
+    "id": "tEPrjlFDa1",
+    "fontId": "museo-sans",
+    "fontFamily": "'museo-sans'",
+    "webfont": {
+      "typekit": {
+        "id": "wzt2mrv"
+      }
+    }
+  },
+  "logoLightBg": null,
+  "logoDarkBg": null
+}
+
+  };
+  </script>
+  
+  <div id="embedded-icons"><div id="icon-1002702" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" x="0px" y="0px"><g fill="#000000" stroke="none"><path d="M4.000 18.000 l0.000 -2.000 2.000 0.000 2.000 0.000 0.000 2.000 0.000 2.000 -2.000 0.000 -2.000 0.000 0.000 -2.000z M10.000 18.000 l0.000 -2.000 2.000 0.000 2.000 0.000 0.000 2.000 0.000 2.000 -2.000 0.000 -2.000 0.000 0.000 -2.000z M16.000 18.000 l0.000 -2.000 2.000 0.000 2.000 0.000 0.000 2.000 0.000 2.000 -2.000 0.000 -2.000 0.000 0.000 -2.000z M16.590 13.400 l-1.400 -1.400 1.400 -1.410 1.410 -1.400 1.410 1.400 1.400 1.410 -1.400 1.400 c-0.770 0.780 -1.410 1.410 -1.410 1.410 0.000 0.000 -0.640 -0.630 -1.410 -1.410z M4.000 12.000 l0.000 -2.000 2.000 0.000 2.000 0.000 0.000 2.000 0.000 2.000 -2.000 0.000 -2.000 0.000 0.000 -2.000z M10.000 12.000 l0.000 -2.000 2.000 0.000 2.000 0.000 0.000 2.000 0.000 2.000 -2.000 0.000 -2.000 0.000 0.000 -2.000z M10.590 7.400 l-1.400 -1.400 1.400 -1.410 1.410 -1.400 1.410 1.400 1.400 1.410 -1.400 1.400 c-0.770 0.780 -1.410 1.410 -1.410 1.410 0.000 0.000 -0.640 -0.630 -1.410 -1.410z M4.000 6.000 l0.000 -2.000 2.000 0.000 2.000 0.000 0.000 2.000 0.000 2.000 -2.000 0.000 -2.000 0.000 0.000 -2.000z "></path></g></svg></div>
+<div id="icon-291625" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" viewBox="0 0 91 65" version="1.1" x="0px" y="0px"><title>rect12173</title><desc>Created with Sketch.</desc><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"><path d="M0.72252,0.5591 L0.72252,6.98767 L0.72252,13.41624 L0.72252,19.84481 L0.72252,26.27338 L0.72252,32.70195 L0.72252,39.13052 L0.72252,45.5591 L0.72252,51.98767 L0.72252,58.41624 L0.72252,64.84481 L7.15109,64.84481 L13.57966,64.84481 L20.00823,64.84481 L26.43681,64.84481 L32.86538,64.84481 L39.29395,64.84481 L45.72252,64.84481 L52.15109,64.84481 L58.57966,64.84481 L65.00823,64.84481 L71.43681,64.84481 L77.86538,64.84481 L84.29395,64.84481 L90.72252,64.84481 L90.72252,58.41624 L90.72252,51.98767 L90.72252,45.5591 L90.72252,39.13052 L90.72252,32.70195 L90.72252,26.27338 L90.72252,19.84481 L90.72252,13.41624 L90.72252,6.98767 L90.72252,0.5591 L84.29395,0.5591 L77.86538,0.5591 L71.43681,0.5591 L65.00823,0.5591 L58.57966,0.5591 L52.15109,0.5591 L45.72252,0.5591 L39.29395,0.5591 L32.86538,0.5591 L26.43681,0.5591 L20.00823,0.5591 L13.57966,0.5591 L7.15109,0.5591 L0.72252,0.5591 L0.72252,0.5591 Z M7.15109,6.98767 L13.57966,6.98767 L20.00823,6.98767 L26.43681,6.98767 L32.86538,6.98767 L39.29395,6.98767 L45.72252,6.98767 L52.15109,6.98767 L58.57966,6.98767 L65.00823,6.98767 L71.43681,6.98767 L77.86538,6.98767 L84.29395,6.98767 L84.29395,13.41624 L84.29395,19.84481 L77.86538,19.84481 L77.86538,26.27338 L84.29395,26.27338 L84.29395,32.70195 L84.29395,39.13052 L84.29395,45.5591 L84.29395,51.98767 L84.29395,58.41624 L77.86538,58.41624 L71.43681,58.41624 L65.00823,58.41624 L58.57966,58.41624 L52.15109,58.41624 L45.72252,58.41624 L39.29395,58.41624 L32.86538,58.41624 L26.43681,58.41624 L20.00823,58.41624 L13.57966,58.41624 L13.57966,51.98767 L7.15109,51.98767 L7.15109,45.5591 L7.15109,39.13052 L7.15109,32.70195 L7.15109,26.27338 L7.15109,19.84481 L7.15109,13.41624 L7.15109,6.98767 L7.15109,6.98767 Z M13.57966,51.98767 L20.00823,51.98767 L20.00823,45.5591 L13.57966,45.5591 L13.57966,51.98767 L13.57966,51.98767 Z M20.00823,45.5591 L26.43681,45.5591 L26.43681,39.13052 L26.43681,32.70195 L20.00823,32.70195 L20.00823,39.13052 L20.00823,45.5591 L20.00823,45.5591 Z M26.43681,32.70195 L32.86538,32.70195 L32.86538,26.27338 L26.43681,26.27338 L26.43681,32.70195 L26.43681,32.70195 Z M32.86538,32.70195 L32.86538,39.13052 L39.29395,39.13052 L39.29395,32.70195 L32.86538,32.70195 L32.86538,32.70195 Z M39.29395,32.70195 L45.72252,32.70195 L52.15109,32.70195 L52.15109,26.27338 L45.72252,26.27338 L39.29395,26.27338 L39.29395,32.70195 L39.29395,32.70195 Z M52.15109,26.27338 L58.57966,26.27338 L58.57966,19.84481 L52.15109,19.84481 L52.15109,26.27338 L52.15109,26.27338 Z M58.57966,19.84481 L65.00823,19.84481 L65.00823,13.41624 L58.57966,13.41624 L58.57966,19.84481 L58.57966,19.84481 Z M65.00823,19.84481 L65.00823,26.27338 L71.43681,26.27338 L71.43681,19.84481 L65.00823,19.84481 L65.00823,19.84481 Z M71.43681,26.27338 L71.43681,32.70195 L77.86538,32.70195 L77.86538,26.27338 L71.43681,26.27338 L71.43681,26.27338 Z" fill="#000000" sketch:type="MSShapeGroup"></path></g></svg></div>
+<div id="icon-708540" style="display: none;"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 24 24" version="1.1" x="0px" y="0px"><g transform="translate(0,-1028.3622)"><path d="m 11,1032.363 0,1.0781 c -1.153008,0.1649 -2.268026,0.6163 -3.236329,1.3535 l -0.757812,-0.7578 -1.414062,1.414 0.769531,0.7696 c -0.69455,0.9461 -1.121985,2.0273 -1.28125,3.1426 l -1.080078,0 0,2 1.080078,0 c 0.159317,1.1155 0.58825,2.1962 1.283203,3.1425 l -0.771484,0.7715 1.414062,1.4141 0.757812,-0.7578 c 0.96801,0.7364 2.083839,1.1868 3.236329,1.3515 l 0,1.0782 2,0 0,-1.0782 c 1.152668,-0.1644 2.26807,-0.6153 3.236328,-1.3515 l 0.757812,0.7578 1.414063,-1.4141 -0.769532,-0.7695 c 0.695503,-0.9466 1.123815,-2.0285 1.283204,-3.1445 l 1.078125,0 0,-2 -1.078125,0 c -0.159318,-1.1156 -0.588251,-2.1963 -1.283204,-3.1426 l 0.769532,-0.7696 -1.414063,-1.414 -0.755859,0.7558 C 15.26984,1034.0558 14.153024,1033.6059 13,1033.4411 l 0,-1.0781 -2,0 z m 1,2.9882 c 1.279126,0 2.55929,0.491 3.541015,1.4727 1.963412,1.9635 1.963412,5.1166 0,7.0801 -1.963451,1.9634 -5.116626,1.9634 -7.080078,0 -1.963412,-1.9635 -1.963412,-5.1166 0,-7.0801 0.981726,-0.9817 2.259936,-1.4727 3.539063,-1.4727 z" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path><path d="m 0,1028.3622 c 0,8 0,16 0,24 l 24,0 0,-24 z m 2,2 20,0 0,20 -20,0 z" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path><path style="" d="m 13,1040.363 a 1,1 0 0 1 -1,1 1,1 0 0 1 -1,-1 1,1 0 0 1 1,-1 1,1 0 0 1 1,1 z" display="inline" fill="#000000" fill-opacity="1" stroke="none"></path></g></svg></div>
+<div id="icon-421" style="display: none;"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 56.533" enable-background="new 0 0 100 56.533" xml:space="preserve"><path d="M99.995,28.08c-0.002-0.042-0.006-0.082-0.009-0.123c-0.002-0.021-0.003-0.042-0.005-0.062	c-0.003-0.03-0.008-0.06-0.012-0.089c-0.004-0.035-0.008-0.07-0.014-0.104c-0.001-0.004-0.002-0.009-0.002-0.013	c-0.123-0.773-0.487-1.498-1.045-2.056c-3.19-3.781-6.985-7.146-10.844-10.219C79.753,8.792,70.248,3.252,59.756,1.022	C53.692-0.266,47.59-0.321,41.494,0.769c-5.545,0.992-10.889,3.054-15.891,5.61c-7.829,4-14.979,9.515-21.209,15.698	c-1.153,1.144-2.3,2.312-3.348,3.555c-1.396,1.654-1.396,3.613,0,5.267c3.19,3.781,6.985,7.145,10.844,10.219	c8.312,6.622,17.817,12.161,28.309,14.391c6.064,1.289,12.167,1.344,18.263,0.254c5.544-0.992,10.888-3.054,15.891-5.61	c7.829-4.001,14.979-9.515,21.209-15.698c1.153-1.145,2.3-2.312,3.348-3.555c0.558-0.559,0.922-1.283,1.045-2.057	c0-0.004,0.001-0.009,0.002-0.013c0.006-0.035,0.01-0.069,0.014-0.104c0.004-0.029,0.009-0.059,0.012-0.089	c0.002-0.021,0.003-0.041,0.005-0.062c0.003-0.04,0.007-0.08,0.009-0.122c0.003-0.062,0.005-0.124,0.005-0.187	S99.998,28.142,99.995,28.08z M50,47.507c-10.627,0-19.241-8.614-19.241-19.241C30.759,17.64,39.373,9.025,50,9.025	s19.241,8.614,19.241,19.241C69.241,38.893,60.627,47.507,50,47.507z"></path><circle cx="50" cy="28.266" r="6.369"></circle></svg></div>
+<div id="icon-7556" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g><path d="M44.943,15.814c1.311,6.911,2.619,13.823,3.932,20.735c0.276,0.121,0.594,0.038,0.887,0.062   c15.361-0.007,30.723,0.001,46.084-0.006c2.194-0.17,4.21,1.8,4.152,3.985c-0.37,8.341-0.757,16.679-1.132,25.021   c-0.024,0.328,0.004,0.666-0.089,0.986c-1.145-0.018-2.289,0.006-3.432-0.012c-0.438-0.352-0.747-0.842-1.166-1.217   c-2.844-2.736-6.549-4.572-10.447-5.184c-2.962-0.459-5.983,0.18-8.743,1.26c-2.806,1.137-5.483,2.773-7.438,5.119   c-1.979,0.064-3.967,0.008-5.951,0.027c-4.251-0.004-8.501,0.002-12.75-0.004c-0.006-3.877-0.865-7.76-2.566-11.248   c-2.121-4.444-5.555-8.243-9.738-10.833c-4.686-2.918-10.32-4.273-15.818-3.79c-5.754,0.467-11.316,2.941-15.527,6.889   c-0.844,0.733-1.541,1.611-2.316,2.41c0.045-5.679,0.006-11.357,0.018-17.036C2.896,25.145,2.916,17.31,2.893,9.476   c0.166-0.022,0.332-0.034,0.496-0.035c11.277,0.007,22.555-0.002,33.832,0.005c2.398,0.021,4.744,1.189,6.209,3.088   C44.174,13.493,44.701,14.623,44.943,15.814z M35.107,15.452c-7.283-0.009-14.568,0.003-21.854-0.006   c-0.088,0.022-0.268,0.069-0.355,0.092c-0.016,7.026,0.004,14.054-0.012,21.08c9.105,0.056,18.215,0.018,27.32,0.019   c-1.061-6.543-2.172-13.08-3.258-19.62C36.857,16.108,36.006,15.426,35.107,15.452z"></path></g><g><path d="M37.443,50.929c4.172,3.672,6.898,8.944,7.445,14.477c0.639,5.848-1.125,11.916-4.844,16.479   c-3.129,3.908-7.6,6.723-12.486,7.824c-5.486,1.27-11.445,0.406-16.312-2.438c-4.199-2.416-7.578-6.227-9.463-10.686   c-1.791-4.162-2.223-8.869-1.342-13.305c1.061-5.369,4.195-10.275,8.58-13.542c4.15-3.146,9.426-4.725,14.623-4.451   C28.707,45.526,33.666,47.545,37.443,50.929z M14.475,55.758c-3.881,2.561-6.381,7.092-6.404,11.75   c-0.062,2.578,0.592,5.17,1.873,7.406c1.428,2.521,3.639,4.59,6.244,5.854c4.285,2.111,9.611,1.891,13.701-0.576   c2.375-1.416,4.34-3.52,5.559-6.004c1.443-2.871,1.842-6.234,1.195-9.377c-0.938-4.705-4.406-8.797-8.889-10.502   c-1.447-0.574-2.992-0.879-4.543-0.969C20.143,53.193,17.023,54.033,14.475,55.758z"></path></g><g><path d="M93.566,70.904c1.342,2.479,1.829,5.396,1.435,8.182c-0.593,4.488-3.668,8.527-7.812,10.336   c-2.597,1.158-5.564,1.43-8.336,0.824c-2.884-0.633-5.536-2.262-7.408-4.545c-1.528-1.854-2.549-4.125-2.898-6.502   c-0.432-2.848,0.07-5.834,1.454-8.365c1.443-2.691,3.851-4.854,6.679-6.01c2.193-0.916,4.634-1.182,6.982-0.863   C87.82,64.518,91.62,67.188,93.566,70.904z M77.522,71.164c-1.667,1.162-2.812,3.047-3.063,5.064   c-0.072,1.01-0.078,2.047,0.229,3.023c0.587,2.08,2.154,3.857,4.143,4.707c2.008,0.867,4.407,0.797,6.344-0.227   c1.536-0.793,2.772-2.148,3.418-3.752c0.866-2.102,0.69-4.609-0.489-6.557c-1.021-1.717-2.757-3.002-4.714-3.42   C81.386,69.539,79.198,69.975,77.522,71.164z"></path></g></svg></div></div>
+  <script src="assets/js/runtime-es2015.js" type="text/javascript"></script>
+  <script src="assets/js/polyfills-es2015.js" type="text/javascript"></script>
+  <script src="assets/js/styles-es2015.js" type="text/javascript"></script>
+  <script src="assets/js/scripts.js" type="text/javascript" defer></script>
+  <script src="assets/js/vendor-es2015.js" type="text/javascript"></script>
+  <script src="assets/js/main-es2015.js" type="text/javascript"></script>
+</body>
+</html>
